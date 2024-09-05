@@ -1,0 +1,292 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+
+/* HEADER --- FOOTER */
+/* Header styling */
+header {
+    background-color: #151e26; 
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    width: 95%;
+    margin: auto;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-grow: 1;
+}
+
+header nav ul li {
+    margin-right: 20px;
+}
+
+header nav ul li a {
+    color: #ffffff; 
+    text-decoration: none;
+    font-weight: 600;
+}
+
+header .user-info {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+header .user-info span {
+    margin-right: 10px;
+    color: #ffffff; 
+    white-space: nowrap;
+}
+
+header .logout-button {
+    background-color: #e74c3c; 
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    white-space: nowrap; 
+}
+
+header .logout-button:hover {
+    background-color: #c0392b; 
+}
+
+
+/* Footer styling */
+footer {
+    background-color: #151e26; 
+    color: #ffffff; 
+    text-align: center;
+    padding: 10px 20px;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Algemene styling voor alle pagina's */
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #2c3e50; 
+    color: #ffffff; 
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px; 
+    margin-bottom: 80px; 
+}
+
+/* Container styling voor alle pagina's */
+.container, .patientDiv {
+    width: 80%;
+    max-width: 800px; 
+    margin: auto;
+    overflow: hidden;
+    padding: 20px;
+    background: #34495e;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    border: 1px solid #1c2833; 
+    margin-top: 100px; 
+    margin-bottom: 20px; 
+}
+
+/* Titels */
+h1, h2, h3 {
+    color: #ecf0f1; 
+}
+
+/* Paragraaf */
+p {
+    font-size: 1em;
+    line-height: 1.6;
+    color: #ecf0f1; 
+}
+
+/* Tabel styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #1c2833; 
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+/* Formulier styling voor alle pagina's */
+form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+/* Correctie voor header */
+
+header form {
+    margin-top: 0;
+}
+
+form input[type="email"],
+form input[type="password"],
+form input[type="text"],
+form input[type="date"],
+form input[type="number"],
+form input[type="tel"],
+form select,
+form textarea {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #34495e; 
+    border-radius: 4px;
+    background-color: #3e5871; 
+    color: #ffffff; 
+    font-size: 1em;
+    font-weight: 600; 
+    width: 100%; 
+    box-sizing: border-box; 
+}
+
+form textarea {
+    height: 100px; 
+    resize: vertical; 
+}
+
+form button[type="submit"],
+form input[type="submit"],
+form button[type="button"] {
+    padding: 8px 20px; 
+    margin: 10px 0;
+    border: none;
+    border-radius: 4px;
+    background-color: #27ae60; 
+    color: white;
+    font-size: 1em;
+    font-weight: 600; 
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%; 
+    box-sizing: border-box; 
+    text-align: center; 
+}
+
+form button[type="submit"]:hover,
+form input[type="submit"]:hover,
+form button[type="button"]:hover {
+    background-color: #219150; /* Donkerder groen */
+}
+
+/* Nieuwe en bestaande patiënt secties voor dashboard */
+#newPatient, #existingPatient,#manageExaminations, #manageMedications {
+    background: #2c3e50; 
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 8px;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.button-container button {
+    flex: 1; 
+}
+
+/* Uitloggen knop voor dashboard en new patient view */
+.logout input[type="submit"] {
+    background-color: #e74c3c; 
+    align-self: center; 
+}
+
+.logout input[type="submit"]:hover {
+    background-color: #c0392b; 
+}
+
+/* Foutmeldingen voor public page */
+.error-message {
+    color: #e74c3c; /* Rood */
+    font-weight: bold;
+}
+
+.logout-message {
+    color: #27ae60; /* Groen */
+    font-weight: bold;
+}
+
+
+/* previous consultations*/ 
+.previous-consultation {
+    margin-bottom: 10px;
+    background-color: #3e5871; /* Donkere achtergrondkleur */
+    padding: 10px;
+    color: #fff; /* Witte tekst */
+    border-radius: 5px;
+}
+
+.consultation-details {
+    display: none;
+    margin-top: 10px;
+}
+
+.toggle-button {
+    cursor: pointer;
+    color: #fff; /* Helder blauwe kleur voor de toggle tekst */
+    text-decoration: underline;
+}
+
+.previous-consultation .toggle-button:hover {
+    color: #87cefa; /* Lichtere blauwe kleur bij hover */
+}
+
+#toggle-all-consultations {
+    padding: 8px 20px; 
+    margin: 10px 0;
+    border: none;
+    border-radius: 4px;
+    background-color: #27ae60; 
+    color: white;
+    font-size: 1em;
+    font-weight: 600; 
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%; 
+    box-sizing: border-box; 
+    text-align: center; 
+}
+
+#toggle-all-consultations:hover {
+    background-color: #219150; /* Donkerder groen */
+}
+
